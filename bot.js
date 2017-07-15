@@ -42,7 +42,7 @@ function postMessage() {
   } else if(resp == 2) {
     botResponse = 'Hello mods';
   } else if(resp == 3) {
-    botResponse = 'Welcome to my domain and worship me with these other peasants';
+    botResponse = 'Welcome to my domain! Make sure to read the chat description *cue imperial march theme*';
   } else if(resp == 4) {
     botResponse = 'Bow down to me ants';
   } else if(resp == 5) {
