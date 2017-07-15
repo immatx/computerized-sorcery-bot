@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cue supreme overlord$/;
-      botRegec = /^\cue admin$/;
+      botRegec = /^\/cue admin$/;
 
   if(request.text && botRegex.test(request.text)) {
     resp = 0
@@ -45,7 +45,7 @@ function postMessage() {
     "text" : botResponse
   };
 
-  console.log('sending ' + botResponse + ' to ' + 9yHP2TK9WIEFnvnZKPacLXy5B97FztVCGSwq1n9p);
+  console.log('sending ' + botResponse + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
