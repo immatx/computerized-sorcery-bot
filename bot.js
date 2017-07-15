@@ -7,14 +7,23 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cue supreme overlord$/;
       botRegec = /^\/show admins$/;
+      botReged = /^\/welcome$/;
+      botRegee = /^\/bow down$/;
+      botRegef = /^\/oprah overlord$/;
+      resp = 0;
 
   if(request.text && botRegex.test(request.text)) {
-    resp = 0
-    this.res.writeHead(200);
-    postMessage();
-    this.res.end();
-  } else if(request.text && botRegec.test(request.text)) {
     resp = 1
+  } else if(request.text && botRegec.test(request.text)) {
+    resp = 2
+  } else if(request.text && botReged.test(request.text)) {
+    resp = 3
+  } else if(request.text && botRegee.test(request.text)) {
+    resp = 4
+  } else if(request.text && botRegef.test(request.text)) {
+    resp = 5
+  }
+  if(resp > 0) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
@@ -28,10 +37,16 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  if(resp == 0) {
+  if(resp == 1) {
     botResponse = 'I am Supreme Overlord Samantha Sprecace';
-  } else {
+  } else if(resp == 2) {
     botResponse = 'Hello mods';
+  } else if(resp == 3) {
+    botResponse = 'Welcome to my domain and worship me with these other peasants';
+  } else if(resp == 4) {
+    botResponse = 'Bow down to me ants';
+  } else if(resp == 5) {
+    botResponse = 'You get to worship me. You get to worship me. Everyone gets to worship me!';
   }
 
   options = {
