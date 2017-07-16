@@ -13,11 +13,12 @@ function respond() {
       botRegeg = /^\/welcome overlord$/;
       botRegeh = /^\/love yall$/;
       botRegei = /^\/oligarchy or monarchy$/;
-      botRegej = /^\/doggos$/;
+      botRegej = /^\/doggos ftw$/;
       botRegek = /^\/no cats$/;
       botRegel = /^\/dropped$/;
       botRegem = /^\/no thanks$/;
       botRegen = /^\/yas$/;
+      botRegeo = /^\/doggos$/;
       resp = 0;
 
   if(request.text && botRegex.test(request.text)) {
@@ -46,6 +47,8 @@ function respond() {
     resp = 12
   } else if(request.text && botRegen.test(request.text)) {
     resp = 13
+  } else if(request.text && botRegeo.test(request.text)) {
+    resp = 14
   }
   if(resp > 0) {
     this.res.writeHead(200);
@@ -87,6 +90,8 @@ function postMessage() {
     botResponse = 'No thanks';
   } else if(resp == 13) {
     botResponse = 'YAAAAAAAAAASSSSS!!!!!!';
+  } else if(resp == 14) {
+    botResponse = 'Doggos';
   }
 
   options = {
