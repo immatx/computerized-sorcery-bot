@@ -70,8 +70,9 @@ function postMessage() {
   if(resp == 1) {
     botResponse = 'I am Supreme Overlord Samantha Sprecace';
   } else if(resp == 99) {
-    botResponse = 'current commands:<br/>/cue supreme overlord<br/>/show admins<br/>/welcome<br/>/bow down<br/>/oprah overlord<br/>'
-    + '/welcome overlord<br/>/love yall<br/>/oligarchy or monarchy<br/>/doggos ftw<br/>/no cats<br/>/dropped<br/>/no thanks<br/>/yas<br/>/doggos'
+    botResponse = "current commands:" + "\n" + "/cue supreme overlord" + "\n" + "/show admins" + "\n" + "/welcome" + "\n"
+    + "/bow down" + "\n" + "/oprah overlord" + "\n" + "/welcome overlord" + "\n" + "/love yall" + "\n" + "/oligarchy or monarchy"
+    + "\n" + "/doggos ftw" + "\n" + "/no cats" + "\n" + "/dropped" + "\n" + "/no thanks" + "\n" + "/yas" + "\n" + "/doggos"
   } else if(resp == 2) {
     botResponse = 'Hello mods';
   } else if(resp == 3) {
