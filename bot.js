@@ -25,6 +25,12 @@ function respond() {
     resp = 4
   } else if(request.text && botRegef.test(request.text)) {
     resp = 5
+  } else if(request.text && botRegeg.test(request.text)) {
+    resp = 6
+  } else if(request.text && botRegeh.test(request.text)) {
+    resp = 7
+  } else if(request.text && botRegei.test(request.text)) {
+    resp = 8
   }
   if(resp > 0) {
     this.res.writeHead(200);
