@@ -13,6 +13,9 @@ function respond() {
       botRegeg = /^\/welcome overlord$/;
       botRegeh = /^\/love yall$/;
       botRegei = /^\/oligarchy or monarchy$/;
+      botRegej = /^\/doggos$/;
+      botRegek = /^\/no cats$/;
+      botRegel = /^\/dropped$/;
       resp = 0;
 
   if(request.text && botRegex.test(request.text)) {
@@ -31,6 +34,12 @@ function respond() {
     resp = 7
   } else if(request.text && botRegei.test(request.text)) {
     resp = 8
+  } else if(request.text && botRegej.test(request.text)) {
+    resp = 9
+  } else if(request.text && botRegek.test(request.text)) {
+    resp = 10
+  } else if(request.text && botRegel.test(request.text)) {
+    resp = 11
   }
   if(resp > 0) {
     this.res.writeHead(200);
@@ -62,6 +71,12 @@ function postMessage() {
     botResponse = 'I love you guys';
   } else if(resp == 8) {
     botResponse = 'Why have an oligarchy when you can have a monarchy!';
+  } else if(resp == 9) {
+    botResponse = 'DOGGOS FOR THE WIN!!!';
+  } else if(resp == 10) {
+    botResponse = 'How could you ever think cats are better than dogs?!';
+  } else if(resp == 11) {
+    botResponse = 'I think you were dropped on your head as a child....';
   }
 
   options = {
