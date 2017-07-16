@@ -16,6 +16,8 @@ function respond() {
       botRegej = /^\/doggos$/;
       botRegek = /^\/no cats$/;
       botRegel = /^\/dropped$/;
+      botRegem = /^\/no thanks$/;
+      botRegen = /^\/yas$/;
       resp = 0;
 
   if(request.text && botRegex.test(request.text)) {
@@ -40,6 +42,10 @@ function respond() {
     resp = 10
   } else if(request.text && botRegel.test(request.text)) {
     resp = 11
+  } else if(request.text && botRegem.test(request.text)) {
+    resp = 12
+  } else if(request.text && botRegen.test(request.text)) {
+    resp = 13
   }
   if(resp > 0) {
     this.res.writeHead(200);
@@ -77,6 +83,10 @@ function postMessage() {
     botResponse = 'How could you ever think cats are better than dogs?!';
   } else if(resp == 11) {
     botResponse = 'I think you were dropped on your head as a child....';
+  } else if(resp == 12) {
+    botResponse = 'No thanks';
+  } else if(resp == 13) {
+    botResponse = 'YAAAAAAAAAASSSSS!!!!!!';
   }
 
   options = {
