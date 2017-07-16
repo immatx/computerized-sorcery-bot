@@ -10,6 +10,9 @@ function respond() {
       botReged = /^\/welcome$/;
       botRegee = /^\/bow down$/;
       botRegef = /^\/oprah overlord$/;
+      botRegeg = /^\/welcome overlord$/;
+      botRegeh = /^\/love yall$/;
+      botRegei = /^\/oligarchy or monarchy$/;
       resp = 0;
 
   if(request.text && botRegex.test(request.text)) {
@@ -47,6 +50,12 @@ function postMessage() {
     botResponse = 'Bow down to me ants';
   } else if(resp == 5) {
     botResponse = 'You get to worship me. You get to worship me. Everyone gets to worship me!';
+  } else if(resp == 6) {
+    botResponse = 'Welcome to my domain peasant!';
+  } else if(resp == 7) {
+    botResponse = 'I love you guys';
+  } else if(resp == 8) {
+    botResponse = 'Why have an oligarchy when you can have a monarchy!';
   }
 
   options = {
