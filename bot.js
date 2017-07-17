@@ -5,12 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegea = /^\/commands$/;
-      resp = 0;
+      botRegex = /^\/commands$/;
 
-  if (request.text && botRegea.test(request.text)) {
-    resp = 99
-  if(resp > 0) {
+  if (request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
@@ -24,11 +21,9 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  if(resp == 99) {
     botResponse = "current commands:" + "\n" + "/cue supreme overlord" + "\n" + "/show admins" + "\n" + "/welcome" + "\n"
     + "/bow down" + "\n" + "/oprah overlord" + "\n" + "/welcome overlord" + "\n" + "/love yall" + "\n" + "/oligarchy or monarchy"
     + "\n" + "/doggos ftw" + "\n" + "/no cats" + "\n" + "/dropped" + "\n" + "/no thanks" + "\n" + "/yas" + "\n" + "/doggos"
-  }
 
   options = {
     hostname: 'api.groupme.com',
