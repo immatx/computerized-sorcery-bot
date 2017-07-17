@@ -5,54 +5,11 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cue supreme overlord$/;
       botRegea = /^\/commands$/;
-      botRegec = /^\/show admins$/;
-      botReged = /^\/welcome$/;
-      botRegee = /^\/bow down$/;
-      botRegef = /^\/oprah overlord$/;
-      botRegeg = /^\/welcome overlord$/;
-      botRegeh = /^\/love yall$/;
-      botRegei = /^\/oligarchy or monarchy$/;
-      botRegej = /^\/doggos ftw$/;
-      botRegek = /^\/no cats$/;
-      botRegel = /^\/dropped$/;
-      botRegem = /^\/no thanks$/;
-      botRegen = /^\/yas$/;
-      botRegeo = /^\/doggos$/;
       resp = 0;
 
-  if(request.text && botRegex.test(request.text)) {
-    resp = 1
-  } else if (request.text && botRegea.test(request.text)) {
+  if (request.text && botRegea.test(request.text)) {
     resp = 99
-  } else if(request.text && botRegec.test(request.text)) {
-    resp = 2
-  } else if(request.text && botReged.test(request.text)) {
-    resp = 3
-  } else if(request.text && botRegee.test(request.text)) {
-    resp = 4
-  } else if(request.text && botRegef.test(request.text)) {
-    resp = 5
-  } else if(request.text && botRegeg.test(request.text)) {
-    resp = 6
-  } else if(request.text && botRegeh.test(request.text)) {
-    resp = 7
-  } else if(request.text && botRegei.test(request.text)) {
-    resp = 8
-  } else if(request.text && botRegej.test(request.text)) {
-    resp = 9
-  } else if(request.text && botRegek.test(request.text)) {
-    resp = 10
-  } else if(request.text && botRegel.test(request.text)) {
-    resp = 11
-  } else if(request.text && botRegem.test(request.text)) {
-    resp = 12
-  } else if(request.text && botRegen.test(request.text)) {
-    resp = 13
-  } else if(request.text && botRegeo.test(request.text)) {
-    resp = 14
-  }
   if(resp > 0) {
     this.res.writeHead(200);
     postMessage();
@@ -67,38 +24,10 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  if(resp == 1) {
-    botResponse = 'I am Supreme Overlord Samantha Sprecace';
-  } else if(resp == 99) {
+  if(resp == 99) {
     botResponse = "current commands:" + "\n" + "/cue supreme overlord" + "\n" + "/show admins" + "\n" + "/welcome" + "\n"
     + "/bow down" + "\n" + "/oprah overlord" + "\n" + "/welcome overlord" + "\n" + "/love yall" + "\n" + "/oligarchy or monarchy"
     + "\n" + "/doggos ftw" + "\n" + "/no cats" + "\n" + "/dropped" + "\n" + "/no thanks" + "\n" + "/yas" + "\n" + "/doggos"
-  } else if(resp == 2) {
-    botResponse = 'Hello mods';
-  } else if(resp == 3) {
-    botResponse = 'Welcome to my domain! Make sure to read the chat description *cue imperial march theme*';
-  } else if(resp == 4) {
-    botResponse = 'Bow down to me ants';
-  } else if(resp == 5) {
-    botResponse = 'You get to worship me. You get to worship me. Everyone gets to worship me!';
-  } else if(resp == 6) {
-    botResponse = 'Welcome to my domain peasant!';
-  } else if(resp == 7) {
-    botResponse = 'I love you guys';
-  } else if(resp == 8) {
-    botResponse = 'Why have an oligarchy when you can have a monarchy!';
-  } else if(resp == 9) {
-    botResponse = 'DOGGOS FOR THE WIN!!!';
-  } else if(resp == 10) {
-    botResponse = 'How could you ever think cats are better than dogs?!';
-  } else if(resp == 11) {
-    botResponse = 'I think you were dropped on your head as a child....';
-  } else if(resp == 12) {
-    botResponse = 'No thanks';
-  } else if(resp == 13) {
-    botResponse = 'YAAAAAAAAAASSSSS!!!!!!';
-  } else if(resp == 14) {
-    botResponse = 'Doggos';
   }
 
   options = {
