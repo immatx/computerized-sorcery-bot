@@ -6,7 +6,6 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cue supreme overlord$/;
-      botRegea = /^\/commands$/;
       botRegec = /^\/show admins$/;
       botReged = /^\/welcome$/;
       botRegee = /^\/bow down$/;
@@ -24,8 +23,6 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     resp = 1
-  } else if (request.text && botRegea.test(request.text)) {
-    resp = 99
   } else if(request.text && botRegec.test(request.text)) {
     resp = 2
   } else if(request.text && botReged.test(request.text)) {
@@ -69,10 +66,6 @@ function postMessage() {
 
   if(resp == 1) {
     botResponse = 'I am Supreme Overlord Samantha Sprecace';
-  } else if(resp == 99) {
-    botResponse = "current commands:" + "\n" + "/cue supreme overlord" + "\n" + "/show admins" + "\n" + "/welcome" + "\n"
-    + "/bow down" + "\n" + "/oprah overlord" + "\n" + "/welcome overlord" + "\n" + "/love yall" + "\n" + "/oligarchy or monarchy"
-    + "\n" + "/doggos ftw" + "\n" + "/no cats" + "\n" + "/dropped" + "\n" + "/no thanks" + "\n" + "/yas" + "\n" + "/doggos"
   } else if(resp == 2) {
     botResponse = 'Hello mods';
   } else if(resp == 3) {
