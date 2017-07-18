@@ -91,7 +91,7 @@ function postMessage() {
   } else if(resp == 13) {
     botResponse = 'YAAAAAAAAAASSSSS!!!!!!';
   } else if(resp == 14) {
-    botResponse = 'Doggos';
+    botResponse = 'DOGGOS!';
   }
 
   options = {
