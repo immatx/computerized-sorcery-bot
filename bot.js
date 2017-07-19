@@ -19,6 +19,7 @@ function respond() {
       botRegem = /^\/no thanks$/;
       botRegen = /^\/yas$/;
       botRegeo = /^\/doggos$/;
+      botRegep = /^\/mother$/;
       resp = 0;
 
   if(request.text && botRegex.test(request.text)) {
@@ -49,7 +50,10 @@ function respond() {
     resp = 13
   } else if(request.text && botRegeo.test(request.text)) {
     resp = 14
+  } else if(request.text && botRegep.test(request.text)){
+    resp = 15
   }
+  
   if(resp > 0) {
     this.res.writeHead(200);
     postMessage();
@@ -92,6 +96,8 @@ function postMessage() {
     botResponse = 'YAAAAAAAAAASSSSS!!!!!!';
   } else if(resp == 14) {
     botResponse = 'DOGGOS!';
+  } else if(resp == 15) {
+    botResponse = 'Child, I am your mother';
   }
 
   options = {
