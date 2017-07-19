@@ -20,6 +20,9 @@ function respond() {
       botRegen = /^\/yas$/;
       botRegeo = /^\/doggos$/;
       botRegep = /^\/mother$/;
+      botRegeq = /^\/attacked$/;
+      botReger = /^\/headless$/;
+      botReges = /^\/callsign$/;
       resp = 0;
 
   if(request.text && botRegex.test(request.text)) {
@@ -52,6 +55,12 @@ function respond() {
     resp = 14
   } else if(request.text && botRegep.test(request.text)){
     resp = 15
+  } else if(request.text && botRegeq.test(request.text)){
+    resp = 16
+  } else if(request.text && botReger.test(request.text)){
+    resp = 17
+  } else if(request.text && botReges.test(request.text)){
+    resp = 18;
   }
   
   if(resp > 0) {
@@ -75,7 +84,7 @@ function postMessage() {
   } else if(resp == 3) {
     botResponse = 'Welcome to my domain! Make sure to read the chat description *cue imperial march theme*';
   } else if(resp == 4) {
-    botResponse = 'Bow down to me ants';
+    botResponse = 'Bow down to me ants!';
   } else if(resp == 5) {
     botResponse = 'You get to worship me. You get to worship me. Everyone gets to worship me!';
   } else if(resp == 6) {
@@ -98,6 +107,12 @@ function postMessage() {
     botResponse = 'DOGGOS!';
   } else if(resp == 15) {
     botResponse = 'Child, I am your mother';
+  } else if(resp == 16) {
+    botResponse = 'I feel attacked';
+  } else if(resp == 17) {
+    botResponse = 'Off with your head!';
+  } else if(resp == 18) {
+    botResponse = 'work in progress';    //this is for the callsign/emojis
   }
 
   options = {
