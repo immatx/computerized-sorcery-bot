@@ -23,6 +23,7 @@ function respond() {
       botRegeq = /^\/attacked$/;
       botReger = /^\/headless$/;
       botReges = /^\/callsign$/;
+      botReget = /^\/gello$/;
       resp = 0;
 
   if(request.text && botRegex.test(request.text)) {
@@ -61,6 +62,8 @@ function respond() {
     resp = 17
   } else if(request.text && botReges.test(request.text)){
     resp = 18;
+  } else if(request.text && botReget.test(request.text)){
+    resp = 19;
   }
   
   if(resp > 0) {
@@ -113,6 +116,8 @@ function postMessage() {
     botResponse = 'Off with your head!';
   } else if(resp == 18) {
     botResponse = 'work in progress';    //this is for the callsign/emojis
+  } else if(resp == 19) {
+    botResponse = 'Gello yall';
   }
 
   options = {
