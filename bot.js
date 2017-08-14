@@ -24,6 +24,9 @@ function respond() {
       botReger = /^\/headless$/;
       botReges = /^\/callsign$/;
       botReget = /^\/gello$/;
+      botRegeu = /^\/ripi$/;
+      botRegev = /^\/bots$/;
+      botRegew = /^\/interest$/;
       resp = 0;
 
   if(request.text && botRegex.test(request.text)) {
@@ -64,6 +67,12 @@ function respond() {
     resp = 18;
   } else if(request.text && botReget.test(request.text)){
     resp = 19;
+  } else if(request.text && botRegeu.test(request.text)){
+    resp = 20;
+  } else if(request.text && botRegev.test(request.text)){
+    resp = 21;
+  } else if(request.text && botRegew.test(request.text)){
+    resp = 22;
   }
   
   if(resp > 0) {
@@ -118,6 +127,12 @@ function postMessage() {
     botResponse = 'work in progress';    //this is for the callsign/emojis
   } else if(resp == 19) {
     botResponse = 'Gello yall';
+  } else if(resp == 20) {
+    botResponse = 'RIPI';
+  } else if(resp == 21) {
+    botResponse = 'Eradicate all the bots!';
+  } else if(resp == 22) {
+    botResponse = "Interesting concept, I hadn't thought of that";
   }
 
   options = {
