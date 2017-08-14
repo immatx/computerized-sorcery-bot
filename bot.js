@@ -24,7 +24,8 @@ function postMessage() {
     botResponse = "current commands:" + "\n" + "/cue supreme overlord" + "\n" + "/show admins" + "\n" + "/welcome" + "\n"
     + "/bow down" + "\n" + "/oprah overlord" + "\n" + "/welcome overlord" + "\n" + "/love yall" + "\n" + "/oligarchy or monarchy"
     + "\n" + "/doggos ftw" + "\n" + "/no cats" + "\n" + "/dropped" + "\n" + "/no thanks" + "\n" + "/yas" + "\n" + "/doggos"
-    + "\n" + "/mother" + "\n" + "/attacked" + "\n" + "/headless" + "\n" + "/callsign" + "\n" + "/gello"
+    + "\n" + "/mother" + "\n" + "/attacked" + "\n" + "/headless" + "\n" + "/callsign" + "\n" + "/gello" + "\n" + "/ripi" + "\n"
+    + "/eradicate" + "\n" + "/interest"
 
   options = {
     hostname: 'api.groupme.com',
