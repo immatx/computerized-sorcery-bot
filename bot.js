@@ -25,7 +25,7 @@ function respond() {
       botReges = /^\/callsign$/;
       botReget = /^\/gello$/;
       botRegeu = /^\/ripi$/;
-      botRegev = /^\/bots$/;
+      botRegev = /^\/eradicate$/;
       botRegew = /^\/interest$/;
       resp = 0;
 
